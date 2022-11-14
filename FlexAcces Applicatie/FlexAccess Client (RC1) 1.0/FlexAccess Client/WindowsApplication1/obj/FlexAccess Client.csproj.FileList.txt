@@ -1,0 +1,18 @@
+bin\Debug\Interop.GrFingerXLib.dll
+bin\Debug\AxInterop.GrFingerXLib.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Interop.GrFingerXLib.dll
+obj\Debug\AxInterop.GrFingerXLib.dll
+obj\Debug\FlexAccess Client.csproj.ResolveComReference.cache
+obj\Debug\FlexAccess Client.csproj.GenerateResource.Cache
+bin\Debug\FlexAccess.exe.config
+bin\Debug\FlexAccess.exe
+bin\Debug\FlexAccess.pdb
+obj\Debug\FlexAccess.exe
+obj\Debug\FlexAccess.pdb
+obj\Debug\FlexAccess.Properties.Resources.resources
+obj\Debug\FlexAccess.frmMain.resources
+bin\Debug\FlexAccess.exe.manifest
+bin\Debug\FlexAccess.application
+obj\Debug\FlexAccess.exe.manifest
+obj\Debug\FlexAccess.application

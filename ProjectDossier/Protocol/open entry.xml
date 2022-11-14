@@ -1,0 +1,36 @@
+<flexaccess>
+  <xs:schema id="flexaccess" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="flexaccess" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="header">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="messagetype" type="xs:string" minOccurs="0" />
+                <xs:element name="prompt" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="data_row" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+              </xs:sequence>
+              <xs:attribute name="entry_id" type="xs:long" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <header>
+    <messagetype>RequestEntryOpen</messagetype>
+    <prompt>Toegang verleend aan: Rob o/d kletser</prompt>
+  </header>
+  <data entry_id="1">
+    <data_row>Open</data_row>
+  </data>
+  <data entry_id="8">
+    <data_row>On</data_row>
+  </data>
+</flexaccess>
