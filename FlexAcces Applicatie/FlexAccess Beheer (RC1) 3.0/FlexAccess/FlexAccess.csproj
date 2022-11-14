@@ -1,0 +1,599 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA049BEB-831C-4F16-931B-A075AB470503}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FlexAccess</RootNamespace>
+    <AssemblyName>FlexAccess</AssemblyName>
+    <StartupObject>FlexAccess.Program</StartupObject>
+    <ManifestCertificateThumbprint>F053C8A66A9AEF5C517BB6EC6D3F197ACB5744FC</ManifestCertificateThumbprint>
+    <ManifestKeyFile>FlexAccess_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <SignManifests>true</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>c:\FlexAccessBeheer\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\frmAddManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\frmAddManager.Designer.cs">
+      <DependentUpon>frmAddManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PasswordGenerator.cs" />
+    <Compile Include="Connection\Receive.cs" />
+    <Compile Include="Connection\Send.cs" />
+    <Compile Include="CustomMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomMessage.Designer.cs">
+      <DependentUpon>CustomMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emergency\EmergencyClose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emergency\EmergencyClose.Designer.cs">
+      <DependentUpon>EmergencyClose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emergency\EmergencyOpen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emergency\EmergencyOpen.Designer.cs">
+      <DependentUpon>EmergencyOpen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entry\Entry.cs" />
+    <Compile Include="Entry\Entry_Controller.cs" />
+    <Compile Include="Entry\frmAddEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entry\frmAddEntry.Designer.cs">
+      <DependentUpon>frmAddEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entry\Entry_Categorie.cs" />
+    <Compile Include="Entry\frmAddEntry_controller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entry\frmAddEntry_controller.Designer.cs">
+      <DependentUpon>frmAddEntry_controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entry\frmAddEntry_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entry\frmAddEntry_category.Designer.cs">
+      <DependentUpon>frmAddEntry_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entry\frmDetailsEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entry\frmDetailsEntry.Designer.cs">
+      <DependentUpon>frmDetailsEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entry\frmDetailsEntry_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entry\frmDetailsEntry_category.Designer.cs">
+      <DependentUpon>frmDetailsEntry_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entry\frmDetailsEntry_controller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entry\frmDetailsEntry_controller.Designer.cs">
+      <DependentUpon>frmDetailsEntry_controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entry\frmSearchEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entry\frmSearchEntry.Designer.cs">
+      <DependentUpon>frmSearchEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entry\frmSearchEntry_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entry\frmSearchEntry_category.Designer.cs">
+      <DependentUpon>frmSearchEntry_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entry\frmSearchEntry_controller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entry\frmSearchEntry_controller.Designer.cs">
+      <DependentUpon>frmSearchEntry_controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entry\frmViewOpenEntrys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entry\frmViewOpenEntrys.Designer.cs">
+      <DependentUpon>frmViewOpenEntrys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FingerReader\DBFingerPrint.cs" />
+    <Compile Include="FingerReader\FingerPrint.cs" />
+    <Compile Include="FingerReader\frmAddFinger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FingerReader\frmAddFinger.Designer.cs">
+      <DependentUpon>frmAddFinger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlexAccessDataSet.cs">
+      <DependentUpon>FlexAccessDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FlexAccessDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FlexAccessDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FlexClient.cs" />
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help\frmHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help\frmHelp.designer.cs">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log\Loggin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log\Loggin.Designer.cs">
+      <DependentUpon>Loggin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Node\frmAddnode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Node\frmAddnode.Designer.cs">
+      <DependentUpon>frmAddnode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Node\frmAddnode_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Node\frmAddnode_category.designer.cs">
+      <DependentUpon>frmAddnode_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Node\frmAddnode_model.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Node\frmAddnode_model.Designer.cs">
+      <DependentUpon>frmAddnode_model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Node\frmDetailNode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Node\frmDetailNode.Designer.cs">
+      <DependentUpon>frmDetailNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Node\frmDetailNode_model.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Node\frmDetailNode_model.Designer.cs">
+      <DependentUpon>frmDetailNode_model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Node\frmDetailsNode_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Node\frmDetailsNode_category.Designer.cs">
+      <DependentUpon>frmDetailsNode_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Node\frmSearchNode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Node\frmSearchNode.Designer.cs">
+      <DependentUpon>frmSearchNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Node\frmSearchnode_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Node\frmSearchnode_category.designer.cs">
+      <DependentUpon>frmSearchnode_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Node\frmSearchnode_model.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Node\frmSearchnode_model.Designer.cs">
+      <DependentUpon>frmSearchnode_model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Node\Node.cs" />
+    <Compile Include="Node\Node_Categorie.cs" />
+    <Compile Include="Node\Node_Model.cs" />
+    <Compile Include="Person\frmAddPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Person\frmAddPerson.Designer.cs">
+      <DependentUpon>frmAddPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFlexAccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFlexAccess.Designer.cs">
+      <DependentUpon>frmFlexAccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\frmDetailsPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Person\frmDetailsPerson.Designer.cs">
+      <DependentUpon>frmDetailsPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\frmGroupPersons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Person\frmGroupPersons.Designer.cs">
+      <DependentUpon>frmGroupPersons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\frmSearchPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Person\frmSearchPerson.Designer.cs">
+      <DependentUpon>frmSearchPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\Person.cs" />
+    <Compile Include="Person\Person_group.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin\frmAddManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAddManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmChangePassword.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomMessage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CustomMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emergency\EmergencyClose.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EmergencyClose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emergency\EmergencyOpen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EmergencyOpen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entry\frmAddEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAddEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entry\frmAddEntry_category.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAddEntry_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entry\frmAddEntry_controller.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAddEntry_controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entry\frmDetailsEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDetailsEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entry\frmDetailsEntry_category.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDetailsEntry_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entry\frmDetailsEntry_controller.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDetailsEntry_controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entry\frmSearchEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSearchEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entry\frmSearchEntry_category.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSearchEntry_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entry\frmSearchEntry_controller.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSearchEntry_controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entry\frmViewOpenEntrys.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmViewOpenEntrys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FingerReader\frmAddFinger.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAddFinger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help\frmHelp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log\Loggin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Loggin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Node\frmAddnode.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAddnode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Node\frmAddnode_category.resx">
+      <DependentUpon>frmAddnode_category.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Node\frmAddnode_model.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAddnode_model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Node\frmDetailNode.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDetailNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Node\frmDetailNode_model.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDetailNode_model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Node\frmDetailsNode_category.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDetailsNode_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Node\frmSearchNode.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSearchNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Node\frmSearchnode_category.resx">
+      <DependentUpon>frmSearchnode_category.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Node\frmSearchnode_model.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSearchnode_model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\frmAddPerson.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAddPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFlexAccess.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmFlexAccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\frmDetailsPerson.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDetailsPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\frmGroupPersons.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGroupPersons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\frmSearchPerson.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSearchPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rights\Rights.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Rights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systemclient\frmAddsystemclient.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAddsystemclient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systemclient\frmDetailsystemclient.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDetailsystemclient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systemclient\frmSearchsystemclient.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSearchsystemclient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zone\frmAddZone.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAddZone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zone\frmDetailZone.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDetailZone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zone\frmSearchZone.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSearchZone.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Rights\Rights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rights\Rights.Designer.cs">
+      <DependentUpon>Rights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systemclient\frmAddsystemclient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systemclient\frmAddsystemclient.Designer.cs">
+      <DependentUpon>frmAddsystemclient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systemclient\frmDetailsystemclient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systemclient\frmDetailsystemclient.Designer.cs">
+      <DependentUpon>frmDetailsystemclient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systemclient\frmSearchsystemclient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systemclient\frmSearchsystemclient.Designer.cs">
+      <DependentUpon>frmSearchsystemclient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systemclient\Systemclient.cs" />
+    <Compile Include="Zone\frmAddZone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zone\frmAddZone.Designer.cs">
+      <DependentUpon>frmAddZone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Zone\frmDetailZone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zone\frmDetailZone.Designer.cs">
+      <DependentUpon>frmDetailZone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Zone\frmSearchZone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zone\frmSearchZone.Designer.cs">
+      <DependentUpon>frmSearchZone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Zone\Zone.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FlexAccess_TemporaryKey.pfx" />
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+    <None Include="Resources\HolyWest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagramBeheer.cd" />
+    <None Include="Resources\FlexAccess_Logo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxGrFingerXLib">
+      <Guid>{A9995C7C-77BF-4E27-B581-A4B5BBD90E50}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="GrFingerXLib">
+      <Guid>{A9995C7C-77BF-4E27-B581-A4B5BBD90E50}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trashbin.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verwijderen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redbutton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="FlexAccessDataSet.xsc">
+      <DependentUpon>FlexAccessDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FlexAccessDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FlexAccessDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FlexAccessDataSet.xss">
+      <DependentUpon>FlexAccessDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\redbutton.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\siren.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logoff.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
